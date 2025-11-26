@@ -1,20 +1,19 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <h1>im kaviya</h1>
-
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque velit perferendis minus voluptates, repellendus reiciendis hic temporibus odio, quidem deleniti ipsa quibusdam inventore, nostrum architecto blanditiis soluta accusantium quod eius.</p>
-
-      <h1> full stack developement</h1>
-    </>
-  )
+    <BrowserRouter>
+      <Navbar />
+      
+      <Routes>
+        <Route path="/" element={<h1>Home Page</h1>} />
+        <Route path="/booking" element={<h1>Booking Page</h1>} />
+        <Route path="/about" element={<h1>About Page</h1>} />
+        <Route path="/contact" element={<h1>Contact Page</h1>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

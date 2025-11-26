@@ -1,19 +1,18 @@
-import {Link} from "react-router-dom"
-import "../index.css";
+import React from "react";
+import { Link } from "react-router-dom";
 
-const Navbar=()=>{
-    return(
-        <nav className="navbar">
-            <h2 className="logo">StayNest</h2>
-
-            <ul className="nav-links">
-                <li><Link to="/">Home</Link></li>
-                <li><Link to="/booking">Booking</Link></li>
-                <li><Link to="/about">About</Link></li>
-                <li><Link to ="/contact">Contact</Link></li>
-            </ul>
+const Navbar = () => {
+  return (
+    <header className="navbar">
+      <div className="container nav-inner">
+        <Link to="/" className="brand">RoomBooking</Link>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/bookings">My Bookings</Link>
         </nav>
-    );
+      </div>
+    </header>
+  );
 };
 
 export default Navbar;

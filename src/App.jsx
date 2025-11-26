@@ -16,6 +16,7 @@ export default function App() {
           <Route path="/bookings" element={<Bookings />} />
         </Routes>
       </main>
+      
     </div>
   );
 }

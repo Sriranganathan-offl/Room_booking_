@@ -1,6 +1,9 @@
 import "../index.css";
 import { FaHotel, FaThumbsUp, FaHeadset, FaMapMarkedAlt } from "react-icons/fa";
 
+
+
+// about page
 const About = () => {
   return (
     <div className="about-container">

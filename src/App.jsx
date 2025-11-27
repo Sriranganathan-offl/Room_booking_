@@ -14,7 +14,6 @@ function App() {
         <Route path="/booking" element={<h1>Booking Page</h1>} />
         <Route path="/about" element={<About />} />
          <Route path="/account" element={<Account/>} />
-
       </Routes>
       
       

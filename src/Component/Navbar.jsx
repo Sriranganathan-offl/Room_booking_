@@ -11,14 +11,14 @@ const Navbar = () => {
         <li><Link to="/">Home</Link></li>
         <li><Link to="/booking">Booking</Link></li>
 
-        {/* About Icon */}
+    
         <li>
           <Link to="/about" className="about-icon">
             <FaInfoCircle size={20} />
           </Link>
         </li>
 
-        {/* Single Account Button */}
+      
         <li>
           <Link to="/account" className="account-btn">
             <FaUser size={18} /> Account

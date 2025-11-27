@@ -8,7 +8,7 @@ export default function Home() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const [search, setSearch] = useState(""); // Optional search state
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     fetch(API_BASE)

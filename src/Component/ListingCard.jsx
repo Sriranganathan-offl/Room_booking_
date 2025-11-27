@@ -1,21 +1,31 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image1 from "../assets/image1.jpg"
+import image1 from "../assets/image1.jpg"; // fallback
 
 export default function ListingCard({ listing }) {
+  // CASE 1 → listing.image is a direct URL (API)
+  // CASE 2 → listing.images is an array
+  const mainImage =
+    listing.image ||
+    listing.images?.[0] ||
+    image1;
+
   return (
     <article className="card">
-      <Link to={`/listing/${listing.id}`} className="card-link">
+      <Link to={`/listing/${listing.id || listing._id}`} className="card-link">
         <div className="card-image">
           <img
-            src={`/assets/${listing.images?.[0] ?? "placeholder.jpg"}`}
+            src={mainImage}
             alt={listing.name}
-            onError={(e) => { e.target.src = image1; }}
+            onError={(e) => (e.target.src = image1)}
           />
         </div>
+
         <div className="card-body">
           <h3>{listing.name}</h3>
-          <p className="muted">Price: ${listing.price} · Guests: {listing.maxGuests}</p>
+          <p className="muted">
+            Price: ${listing.price} · Guests: {listing.maxGuests}
+          </p>
           <p className="rating">⭐ {listing.rating ?? "N/A"}</p>
         </div>
       </Link>

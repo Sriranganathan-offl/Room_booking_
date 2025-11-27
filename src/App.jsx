@@ -3,6 +3,7 @@ import Navbar from "./Component/Navbar";
 import Home from "./Component/Home";
 import About from "./Component/About";
 import Account from "./Component/Account";
+
 function App() {
   return (
     

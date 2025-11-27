@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { API_BASE } from "../api";
-
-
+import image1 from "../assets/image1.jpg"
 
 function saveBooking(booking) {
   const bs = JSON.parse(localStorage.getItem("bookings") || "[]");
@@ -26,7 +25,8 @@ export default function ListingPage() {
       try {
         const res = await fetch(API_BASE);
         const data = await res.json();
-        const found = (data.listings || []).find(l => String(l.id) === String(id));
+        const items = data.listings || data.data || data.hotels || data.items || [];
+        const found = items.find(l => String(l.id) === String(id));
         setListing(found ?? null);
       } catch (err) {
         console.error(err);
@@ -78,7 +78,12 @@ export default function ListingPage() {
       <div className="listing-grid">
         <div className="images">
           {(listing.images || []).map((img, i) => (
-            <img key={i} src={`./assets/${img}`} alt={`${listing.name} ${i+1}`} onError={(e)=>{ e.target.src='https://via.placeholder.com/600x400?text=No+Image' }} />
+            <img
+              key={i}
+              src={`./assets/${img}`}
+              alt={`${listing.name} ${i+1}`}
+              onError={(e)=>{ e.target.src=image1; }}
+            />
           ))}
         </div>
         <div className="details">

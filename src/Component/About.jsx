@@ -4,14 +4,11 @@ import { FaHotel, FaThumbsUp, FaHeadset, FaMapMarkedAlt } from "react-icons/fa";
 const About = () => {
   return (
     <div className="about-container">
-
-     
       <div className="about-hero">
         <h1>About StayNest</h1>
         <p>Your trusted partner for comfortable, affordable and reliable stays.</p>
       </div>
 
-     
       <div className="about-section">
         <h2>Who We Are</h2>
         <p>
@@ -20,9 +17,7 @@ const About = () => {
         </p>
       </div>
 
-    
       <div className="features-grid">
-
         <div className="feature-card">
           <FaHotel className="feature-icon" />
           <h3>Verified Hotels</h3>
@@ -46,10 +41,8 @@ const About = () => {
           <h3>24/7 Support</h3>
           <p>Our team is always here to help — anytime, anywhere.</p>
         </div>
-
       </div>
 
-    
       <div className="about-section">
         <h2>Our Mission</h2>
         <p>
@@ -57,7 +50,6 @@ const About = () => {
           With StayNest, every journey feels like home.
         </p>
       </div>
-
     </div>
   );
 };

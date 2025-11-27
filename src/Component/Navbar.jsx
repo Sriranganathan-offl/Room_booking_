@@ -1,29 +1,15 @@
 import { Link } from "react-router-dom";
-import { FaInfoCircle, FaUser } from "react-icons/fa";
 import "../index.css";
 
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h2 className="logo">StayNest</h2>
-
+      <h2 className="logo">RoomBooking</h2>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/booking">Booking</Link></li>
-
-    
-        <li>
-          <Link to="/about" className="about-icon">
-            <FaInfoCircle size={20} />
-          </Link>
-        </li>
-
-      
-        <li>
-          <Link to="/account" className="account-btn">
-            <FaUser size={18} /> Account
-          </Link>
-        </li>
+        <li><Link to="/bookings">Bookings</Link></li>
+        <li><Link to="/account">Account</Link></li>
+        <li><Link to="/about">About</Link></li>
       </ul>
     </nav>
   );

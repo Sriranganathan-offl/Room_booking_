@@ -1,24 +1,24 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./Component/Navbar";
+import Navbar from "./Component/Navbar.jsx";
+import Home from "./pages/Home.jsx";
+import ListingPage from "./pages/ListingPage.jsx";
+import Bookings from "./pages/Bookings.jsx";
+import Account from "./Component/Account.jsx";  // must match file exactly
+import About from "./Component/About.jsx";      // must match file exactly
 
-import About from "./Component/About";
-import Account from "./Component/Account";
-import Home from "./pages/Home";
+
 
 function App() {
   return (
-    
     <BrowserRouter>
       <Navbar />
-      
       <Routes>
-        <Route path="/" element={ <Home/>} />
-        <Route path="/booking" element={<h1>Booking Page</h1>} />
+        <Route path="/" element={<Home />} />
+        <Route path="/listing/:id" element={<ListingPage />} />
+        <Route path="/bookings" element={<Bookings />} />
+        <Route path="/account" element={<Account />} />
         <Route path="/about" element={<About />} />
-         <Route path="/account" element={<Account/>} />
       </Routes>
-      
-      
     </BrowserRouter>
   );
 }

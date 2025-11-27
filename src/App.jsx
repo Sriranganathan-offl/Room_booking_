@@ -1,22 +1,25 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import ListingPage from "./pages/ListingPage";
-import Bookings from "./pages/Bookings";
-import Navbar from "./components/Navbar";
-
-export default function App() {
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./Component/Navbar";
+import Home from "./Component/Home";
+import About from "./Component/About";
+import Account from "./Component/Account";
+function App() {
   return (
-    <div className="app">
+    
+    <BrowserRouter>
       <Navbar />
-      <main className="container">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/listing/:id" element={<ListingPage />} />
-          <Route path="/bookings" element={<Bookings />} />
-        </Routes>
-      </main>
       
-    </div>
+      <Routes>
+        <Route path="/" element={ <Home/>} />
+        <Route path="/booking" element={<h1>Booking Page</h1>} />
+        <Route path="/about" element={<About />} />
+         <Route path="/account" element={<Account/>} />
+
+      </Routes>
+      
+      
+    </BrowserRouter>
   );
 }
+
+export default App;

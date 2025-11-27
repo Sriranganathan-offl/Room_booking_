@@ -1,0 +1,83 @@
+/* Full page wrapper with background image */
+.acc-wrapper {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+
+  background: url("/public/Hotel.jpg") center/cover no-repeat;
+}
+
+/* Transparent glass-effect card */
+.acc-card {
+  width: 380px;
+  background: rgba(255, 255, 255, 0.25); /* transparent */
+  padding: 28px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  backdrop-filter: blur(10px); /* adds frosted glass effect */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* optional border for depth */
+}
+
+/* Title */
+.acc-card h2 {
+  color: #fff; /* white text looks better on transparent card */
+  margin-bottom: 6px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: #f0f0f0;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Inputs */
+.form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  outline: none;
+}
+
+/* Buttons */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background:#1e3a8a;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #1e3a8a;
+}
+
+/* Switch links */
+.switch {
+  font-size: 14px;
+  margin-top: 15px;
+  color: #f0f0f0;
+}
+
+.switch span {
+  color: #1e3a8a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.switch span:hover {
+  text-decoration: underline;
+}

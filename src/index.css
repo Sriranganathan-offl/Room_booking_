@@ -1,7 +1,6 @@
 *{
   margin: 0%;
   padding: 0%;
-
 }
 .navbar {
   width: 95%;
@@ -36,6 +35,91 @@ button:hover {
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* About page  */
+
+.about-container {
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+
+.about-hero {
+  background: url("/public/About.jpeg")
+    center/cover no-repeat;
+  color: #fff;
+  padding: 100px 40px;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.about-hero p {
+  font-size: 20px;
+  margin-top: 10px;
+  color: #e8e8e8;
+}
+
+.about-section {
+  padding: 40px 60px;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 32px;
+  color: #1e3a8a;
+  margin-bottom: 15px;
+}
+
+.about-section p {
+  color: #333;
+  font-size: 18px;
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.6;
+}
+
+.features-grid {
+  padding: 40px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #f4f6ff;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  transition: 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.feature-icon {
+  font-size: 40px;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  font-size: 22px;
+  color: #1e3a8a;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #444;
 }
 
 @media (prefers-color-scheme: light) {

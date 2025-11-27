@@ -1,17 +1,31 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { FaInfoCircle, FaUser } from "react-icons/fa";
+import "../index.css";
 
 const Navbar = () => {
   return (
-    <header className="navbar">
-      <div className="container nav-inner">
-        <Link to="/" className="brand">RoomBooking</Link>
-        <nav>
-          <Link to="/">Home</Link>
-          <Link to="/bookings">My Bookings</Link>
-        </nav>
-      </div>
-    </header>
+    <nav className="navbar">
+      <h2 className="logo">StayNest</h2>
+
+      <ul className="nav-links">
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/booking">Booking</Link></li>
+
+        {/* About Icon */}
+        <li>
+          <Link to="/about" className="about-icon">
+            <FaInfoCircle size={20} />
+          </Link>
+        </li>
+
+        {/* Single Account Button */}
+        <li>
+          <Link to="/account" className="account-btn">
+            <FaUser size={18} /> Account
+          </Link>
+        </li>
+      </ul>
+    </nav>
   );
 };
 

@@ -4,7 +4,7 @@ import "../index.css";
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <h2 className="logo">RoomBooking</h2>
+      <h2 className="logo">NestStay</h2>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/bookings">Bookings</Link></li>

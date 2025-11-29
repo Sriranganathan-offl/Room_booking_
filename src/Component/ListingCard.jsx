@@ -1,14 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import image1 from "../assets/image1.jpg"; // fallback
+import { images } from "../assets/images";
+
 
 export default function ListingCard({ listing }) {
-  // CASE 1 → listing.image is a direct URL (API)
-  // CASE 2 → listing.images is an array
-  const mainImage =
-    listing.image ||
-    listing.images?.[0] ||
-    image1;
+  if (!listing) return null;
+
+  // Get first image or fallback
+  const mainImage = images[listing.images?.[0]] || images.fallback;
 
   return (
     <article className="card">
@@ -17,7 +16,9 @@ export default function ListingCard({ listing }) {
           <img
             src={mainImage}
             alt={listing.name}
-            onError={(e) => (e.target.src = image1)}
+            onError={(e) => {
+              e.target.src = images.fallback;
+            }}
           />
         </div>
 

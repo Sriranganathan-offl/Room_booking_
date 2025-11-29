@@ -33,7 +33,7 @@ export default function Home() {
 
   const handleSearch = () => {
     console.log("Search clicked:", search);
-    // Optional: Implement search filtering
+
   };
 
   return (

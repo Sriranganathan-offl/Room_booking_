@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { images } from "../assets/images";
+import image1 from "../assets/listing1-1.jpg"
+import { images as test } from "../assets/images";
 
 export default function ListingCard({ listing }) {
   // listing must come from props
@@ -8,16 +9,12 @@ export default function ListingCard({ listing }) {
 
   const firstImage = listing.images?.[0];
 
-  const mainImage =
-    images[firstImage] ||
-    images.fallback ||
-    "/fallback.jpg";
 
   return (
     <article className="card">
-      <Link to={`/listings/${listing.id || listing._id}`} className="card-link">
+      <Link to={`/listing/${listing.id || listing._id}`} className="card-link">
         <div className="card-image">
-          <img src={mainImage} alt={listing.name} />
+          <img src={test["listing1-1"]} alt={listing.name} />
         </div>
 
         <div className="card-body">

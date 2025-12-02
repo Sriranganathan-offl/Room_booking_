@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import ListingCard from "../Component/ListingCard";
 import "./Home.css";
 import { API_BASE } from "../api";
+// import listingsData form "./ListingPage.jsx";
 
 export default function Home() {
   const [listings, setListings] = useState([]);
@@ -15,7 +16,7 @@ export default function Home() {
       .then((res) => res.json())
       .then((data) => {
         console.log("API FULL DATA:", data);
-        const items = data.listings || data.data || data.hotels || data.items || [];
+        const items = data.listings || data.data || data.hotels || data.items ||  [];
         if (Array.isArray(items)) {
           setListings(items);
         } else {
@@ -44,17 +45,6 @@ export default function Home() {
           <p>Best hotels at affordable prices. Hundreds of choices.</p>
         </div>
 
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Search city, area or hotel name"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-          <input type="date" />
-          <input type="date" />
-          <button onClick={handleSearch}>Search</button>
-        </div>
       </section>
 
       <section className="hotel-list">

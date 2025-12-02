@@ -5,17 +5,17 @@ import "./ListingPage.css";
 const listingsData = [
   {
     id: 1,
-    name: "Cozy Apartment in London",
+    name: "Cozy Apartment in Londons",
     description:
       "This beautiful and spacious apartment is located in the heart of London...",
     locationId: 1,
     images: [
-      "listing1-1.jpg",
-      "listing1-2.jpg",
-      "listing1-3.jpg",
-      "listing1-4.jpg",
-      "listing1-5.jpg",
-      "listing1-6.jpg",
+      "../assets/listing1-1.jpg",
+      "../assets/listing1-2.jpg",
+      "../assets/listing1-3.jpg",
+      "../assets/listing1-4.jpg",
+      "../assets/listing1-5.jpg",
+      "../assets/listing1-6.jpg",
       "listing1-7.jpg",
     ],
     rating: 4.5,

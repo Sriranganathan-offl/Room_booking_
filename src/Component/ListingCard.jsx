@@ -2,24 +2,17 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { images } from "../assets/images";
 
-
 export default function ListingCard({ listing }) {
   if (!listing) return null;
 
-  // Get first image or fallback
-  const mainImage = images[listing.images?.[0]] || images.fallback;
+  const firstImage = listing.images?.[0];
+  // const mainImage = images[firstImage];
 
   return (
     <article className="card">
       <Link to={`/listing/${listing.id || listing._id}`} className="card-link">
         <div className="card-image">
-          <img
-            src={mainImage}
-            alt={listing.name}
-            onError={(e) => {
-              e.target.src = images.fallback;
-            }}
-          />
+          <img src={listing.images?.[0]} alt={listing.name} />
         </div>
 
         <div className="card-body">

@@ -10,7 +10,8 @@ export default function ListingCard({ listing }) {
 
   return (
     <article className="card">
-      <Link to={`/listing/${listing.id || listing._id}`} className="card-link">
+      <Link 
+      to={`/listing/${listing.id || listing._id}`} className="card-link">
         <div className="card-image">
           <img src={listing.images?.[0]} alt={listing.name} />
         </div>
